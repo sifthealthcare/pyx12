@@ -68,9 +68,12 @@ def x12n_document(param, src_file, fd_997, fd_html,
     # Get X12 DATA file
     try:
         src = pyx12.x12file.X12Reader(src_file)
-    except pyx12.errors.X12Error:
-        logger.error('"%s" does not look like an X12 data file' % (src_file))
+    # pam.caton adding more detailed messaging here. 9/14/2021
+    except pyx12.errors.X12Error as e:
+        print(str(e))
+        logger.error('"%s" does not look like an X12 data file: %s' % (src_file, str(e)))
         return False
+
 
     #Get Map of Control Segments
     map_file = 'x12.control.00501.xml' if src.icvn == '00501' else 'x12.control.00401.xml'
@@ -104,7 +107,7 @@ def x12n_document(param, src_file, fd_997, fd_html,
             print('--------------------------------------------')
             # reset to control map for ISA and GS loops
             print('------- counters before --------')
-            print((walker.counter._dict))
+            print(walker.counter._dict)
         if seg.get_seg_id() == 'ISA':
             node = control_map.getnodebypath('/ISA_LOOP/ISA')
             walker.forceWalkCounterToLoopStart('/ISA_LOOP', '/ISA_LOOP/ISA')
@@ -123,7 +126,7 @@ def x12n_document(param, src_file, fd_997, fd_html,
 
         if False:
             print('------- counters after --------')
-            print((walker.counter._dict))
+            print(walker.counter._dict)
         if node is None:
             node = orig_node
         else:
@@ -139,6 +142,8 @@ def x12n_document(param, src_file, fd_997, fd_html,
             elif seg.get_seg_id() == 'GS':
                 fic = seg.get_value('GS01')
                 vriic = seg.get_value('GS08')
+                # pam.caton 9/13/2021 add for reference in log file output:
+                logger.error(f"Working on file {src_file}, type {vriic[:5]} ...")
                 map_file_new = map_index_if.get_filename(icvn, vriic, fic)
                 if map_file != map_file_new:
                     map_file = map_file_new

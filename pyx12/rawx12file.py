@@ -12,6 +12,8 @@ Low level interface to an X12 data input stream.
 Iterates over segment line strings.
 Used by X12Reader.
 """
+
+# Intrapackage imports
 import pyx12.errors
 import pyx12.segment
 
@@ -33,7 +35,13 @@ class RawX12File(object):
         """
         self.fd = fin
         self.buffer = None
-        line = self.fd.read(ISA_LEN)
+        # TODO, change char 82 to a caret when hitting UnicodeDecodeError: 'utf-8' codec can't decode byte 0xac in position 82: invalid start byte")
+        # pam.caton added try except here just to clean up utf-8 failure for current processing
+        try:
+            line = self.fd.read(ISA_LEN)
+        except UnicodeDecodeError as e:
+            err_str = str(e)
+            raise pyx12.errors.X12Error(err_str)
         if line[:3] != 'ISA':
             err_str = "First line does not begin with 'ISA': %s" % line[:3]
             raise pyx12.errors.X12Error(err_str)

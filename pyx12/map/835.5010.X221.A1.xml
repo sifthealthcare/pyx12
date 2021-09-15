@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 ######################################################################
 # Copyright (c)
@@ -10,8 +10,7 @@
 #
 ######################################################################
 -->
-<transaction xid="835W1" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="map.xsd">
+<transaction xid="835W1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="map.xsd">
   <name>HIPAA Health Care Claim Payment/Advice 005010X221A1 835W1</name>
   <loop xid="ISA_LOOP" type="explicit">
     <name>Interchange Control Header</name>
@@ -1009,7 +1008,9 @@
               <name>Payer Technical Contact Information</name>
               <usage>R</usage>
               <pos>1300</pos>
-              <max_use>&gt;1</max_use>
+              <!--pam.caton test change for adventist of 1 allowed -->
+              <!--max_use>&gt;1</max_use-->
+              <max_use>1</max_use>
               <syntax>P0304</syntax>
               <syntax>P0506</syntax>
               <syntax>P0708</syntax>
@@ -1839,6 +1840,7 @@
                   <name>Adjustment Reason Code</name>
                   <usage>R</usage>
                   <seq>02</seq>
+                  <valid_codes external="adjustment_reason" />
                 </element>
                 <element xid="CAS03">
                   <data_ele>782</data_ele>
@@ -1857,6 +1859,7 @@
                   <name>Adjustment Reason Code</name>
                   <usage>S</usage>
                   <seq>05</seq>
+                  <valid_codes external="adjustment_reason" />
                 </element>
                 <element xid="CAS06">
                   <data_ele>782</data_ele>
@@ -1875,6 +1878,7 @@
                   <name>Adjustment Reason Code</name>
                   <usage>S</usage>
                   <seq>08</seq>
+                  <valid_codes external="adjustment_reason" />
                 </element>
                 <element xid="CAS09">
                   <data_ele>782</data_ele>
@@ -1893,6 +1897,7 @@
                   <name>Adjustment Reason Code</name>
                   <usage>S</usage>
                   <seq>11</seq>
+                  <valid_codes external="adjustment_reason" />
                 </element>
                 <element xid="CAS12">
                   <data_ele>782</data_ele>
@@ -1911,6 +1916,7 @@
                   <name>Adjustment Reason Code</name>
                   <usage>S</usage>
                   <seq>14</seq>
+                  <valid_codes external="adjustment_reason" />
                 </element>
                 <element xid="CAS15">
                   <data_ele>782</data_ele>
@@ -1929,6 +1935,7 @@
                   <name>Adjustment Reason Code</name>
                   <usage>S</usage>
                   <seq>17</seq>
+                  <valid_codes external="adjustment_reason" />
                 </element>
                 <element xid="CAS18">
                   <data_ele>782</data_ele>
@@ -3503,6 +3510,7 @@
                     <name>Adjustment Reason Code</name>
                     <usage>R</usage>
                     <seq>02</seq>
+                    <valid_codes external="adjustment_reason" />
                   </element>
                   <element xid="CAS03">
                     <data_ele>782</data_ele>
@@ -3521,6 +3529,7 @@
                     <name>Adjustment Reason Code</name>
                     <usage>S</usage>
                     <seq>05</seq>
+                    <valid_codes external="adjustment_reason" />
                   </element>
                   <element xid="CAS06">
                     <data_ele>782</data_ele>
@@ -3539,6 +3548,7 @@
                     <name>Adjustment Reason Code</name>
                     <usage>S</usage>
                     <seq>08</seq>
+                    <valid_codes external="adjustment_reason" />
                   </element>
                   <element xid="CAS09">
                     <data_ele>782</data_ele>
@@ -3557,6 +3567,7 @@
                     <name>Adjustment Reason Code</name>
                     <usage>S</usage>
                     <seq>11</seq>
+                    <valid_codes external="adjustment_reason" />
                   </element>
                   <element xid="CAS12">
                     <data_ele>782</data_ele>
@@ -3575,6 +3586,7 @@
                     <name>Adjustment Reason Code</name>
                     <usage>S</usage>
                     <seq>14</seq>
+                    <valid_codes external="adjustment_reason" />
                   </element>
                   <element xid="CAS15">
                     <data_ele>782</data_ele>
@@ -3593,6 +3605,7 @@
                     <name>Adjustment Reason Code</name>
                     <usage>S</usage>
                     <seq>17</seq>
+                    <valid_codes external="adjustment_reason" />
                   </element>
                   <element xid="CAS18">
                     <data_ele>782</data_ele>

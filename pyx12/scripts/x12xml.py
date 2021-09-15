@@ -55,7 +55,7 @@ def main():
                         dest="configfile", default=None)
     parser.add_argument('--log-file', '-l', action='store', dest="logfile", default=None)
     parser.add_argument('--map-path', '-m', action='store', dest="map_path", default=None, type=check_map_path_arg)
-    parser.add_argument('--verbose', '-v', action='count', default=0)
+    parser.add_argument('--verbose', '-v', action='count')
     parser.add_argument('--debug', '-d', action='store_true')
     parser.add_argument('--quiet', '-q', action='store_true')
     parser.add_argument('--html', '-H', action='store_true')
@@ -82,8 +82,12 @@ def main():
     if args.debug:
         logger.setLevel(logging.DEBUG)
         param.set('debug', True)
-    if args.verbose > 0:
-        logger.setLevel(logging.DEBUG)
+    # pam.caton 9/13/2021 added per issue 48: https://github.com/azoner/pyx12/issues/48
+    if args.verbose is not None and type(args.verbose).__name__ == 'int':
+        if args.verbose > 0:
+            logger.setLevel(logging.DEBUG)
+    # if args.verbose > 0:
+    #     logger.setLevel(logging.DEBUG)
     if args.quiet:
         logger.setLevel(logging.ERROR)
 

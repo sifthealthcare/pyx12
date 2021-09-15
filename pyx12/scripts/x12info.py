@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import glob
 import sys
 import os
 import os.path
@@ -33,7 +32,7 @@ def check_map_path_arg(map_path):
 def main():
     import argparse
     parser = argparse.ArgumentParser(description='X12 File Metatdata')
-    parser.add_argument('--verbose', '-v', action='count', default=0)
+    parser.add_argument('--verbose', '-v', action='count')
     parser.add_argument('--quiet', '-q', action='store_true')
     parser.add_argument('--debug', '-d', action='store_true')
     parser.add_argument('--eol', '-e', action='store_true', help="Add eol to each segment line")
@@ -58,42 +57,48 @@ def main():
     if args.debug:
         logger.setLevel(logging.DEBUG)
         param.set('debug', True)
-    if args.verbose > 0:
-        logger.setLevel(logging.DEBUG)
+    # pam.caton 9/13/2021 added per issue 48: https://github.com/azoner/pyx12/issues/48
+    if args.verbose is not None and type(args.verbose).__name__ == 'int':
+        if args.verbose > 0:
+            logger.setLevel(logging.DEBUG)
+    # if args.verbose > 0:
+    #     logger.setLevel(logging.DEBUG)
     if args.quiet:
         logger.setLevel(logging.ERROR)
     if args.map_path:
         param.set('map_path', args.map_path)
 
-    for fn in args.input_files:
-        for src_filename in glob.iglob(fn):
-            try:
-                logger.debug('Before get_x12file_metadata_headers')
-                (result, headers, node_summary) = get_x12file_metadata(param, src_filename, args.map_path)
-                #(result, headers) = get_x12file_metadata_headers(param, src_filename, args.map_path)
-                logger.debug('After get_x12file_metadata_headers')
-                if not result:
-                    raise pyx12.errors.EngineError()
-                res = {
-                    'headers': headers,
-                    'nodes': node_summary,
-                    }
-                (basename, ext) = os.path.splitext(os.path.basename(src_filename))
-                json_filename = '{}.node_list.json'.format(basename)
-                if args.outputdirectory:
-                    json_file = os.path.join(args.outputdirectory , json_filename)
-                else:
-                    json_file = os.path.join(os.path.dirname(os.path.abspath(src_filename)), json_filename)
-                with open(json_file, 'w') as fd:
-                    json.dump(res, fd, indent=4)
+    for src_filename in args.input_files:
+        try:
+            logger.debug('Before get_x12file_metadata_headers')
+            (result, headers, node_summary) = get_x12file_metadata(param, src_filename, args.map_path)
+            #(result, headers) = get_x12file_metadata_headers(param, src_filename, args.map_path)
+            logger.debug('After get_x12file_metadata_headers')
+            if not result:
+                raise pyx12.errors.EngineError()
+            res = {
+                'headers': headers,
+                'nodes': node_summary,
+                }
+            (basename, ext) = os.path.splitext(src_filename)
+            json_filename = '{}.node_list.json'.format(basename)
+            if args.outputdirectory:
+                json_file = os.path.join(args.outputdirectory , json_filename)
+            else:
+                json_file = os.path.join(os.path.dirname(os.path.abspath(src_filename)), json_filename)
+            # pam.caton 9/14/2021 fix to run
+            with open(json_file, 'w') as fd:
+                json.dump(res, fd, indent=4)
+            # with file(json_file, 'w') as fd:
+            #     json.dump(res, fd, indent=4)
 
-            except IOError:
-                logger.exception('Could not open files')
-                return False
-            except KeyboardInterrupt:
-                print("\n[interrupt]")
-            except Exception as e:
-                raise e
+        except IOError:
+            logger.exception('Could not open files')
+            return False
+        except KeyboardInterrupt:
+            print("\n[interrupt]")
+        except Exception as e:
+            raise e
 
 
 if __name__ == '__main__':

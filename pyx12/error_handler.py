@@ -296,7 +296,7 @@ class err_handler(object):
         if bad_value:
             sout += ' (%s)' % (bad_value)
         logger.error(sout)
-        #print(self.cur_ele_node.errors)
+        #print self.cur_ele_node.errors
 
     def close_isa_loop(self, node, seg, src):
         """
@@ -332,8 +332,8 @@ class err_handler(object):
         #if type == 'ISA':
         #return node
 
-#    def update_node(self, obj):
-#        self.children[-1].update_node(obj)
+    # def update_node(self, obj):
+    # self.children[-1].update_node(obj)
 
     def _get_last_child(self):
         """
@@ -402,8 +402,8 @@ class err_node(object):
         """
         pass
 
-#    def update_node(self, obj):
-#        pass
+    # def update_node(self, obj):
+    #     pass
 
     def get_cur_line(self):
         """
@@ -741,6 +741,9 @@ class err_st(err_node):
         self.cur_line_se = None
         self.trn_set_id = seg_data.get_value('ST01')
         self.vriic = seg_data.get_value('ST03')
+        # pam.caton 9/13/2021 835 work-around since ST03 is not populated, get GS value if avail.
+        if self.vriic == None:
+            self.vriic = parent.vriic
         self.id = 'ST'
 
         self.ack_code = 'R'
@@ -754,6 +757,7 @@ class err_st(err_node):
         """
         Params:     visitor - ref to visitor class
         """
+
         visitor.visit_st_pre(self)
         for child in self.children:
             child.accept(visitor)
@@ -1126,13 +1130,13 @@ class errh_null(object):
     def get_parent(self):
         return None
 
-#    def get_first_child(self):
-#        """
-#        """
-#        if len(self.children) > 0:
-#            return self.children[0]
-#        else:
-#            return None
+    # def get_first_child(self):
+    #     """
+    #     """
+    #     if len(self.children) > 0:
+    #         return self.children[0]
+    #     else:
+    #         return None
 
     def get_next_sibling(self):
         """

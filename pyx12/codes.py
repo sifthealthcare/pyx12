@@ -14,8 +14,8 @@ External Codes interface
 
 import os.path
 import logging
-import xml.etree.cElementTree as et
 from pkg_resources import resource_stream
+import xml.etree.cElementTree as et
 
 # Intrapackage imports
 from pyx12.errors import EngineError
@@ -53,8 +53,8 @@ class ExternalCodes(object):
             code_fd = resource_stream(__name__, os.path.join('map', codes_file))
 
         self.exclude_list = exclude.split(',') if exclude is not None else []
-        parser = et.XMLParser(encoding="utf-8")
-        for cElem in et.parse(code_fd, parser=parser).iter('codeset'):
+
+        for cElem in et.parse(code_fd).iter('codeset'):
             codeset_id = cElem.findtext('id')
             name = cElem.findtext('name')
             data_ele = cElem.findtext('data_ele')
@@ -94,4 +94,5 @@ class ExternalCodes(object):
         """
         Debug print first <count> codes
         """
-        print([v for k,v in self.codes.items()[:count]])
+        for key in list(self.codes.keys()):
+            print((self.codes[key][:count]))
