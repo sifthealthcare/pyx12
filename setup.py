@@ -1,4 +1,10 @@
 from setuptools import setup
+import os
+
+mypackage_root_dir = os.path.dirname(os.path.abspath(__file__))
+
+with open(os.path.join(mypackage_root_dir, "VERSION")) as version_file:
+    version = version_file.read().strip()
 
 # from pyx12.version import __version__
 
@@ -11,7 +17,7 @@ document or can translate to and from an XML representation of the data file."""
 setup(
     name="pyx12",
     python_requires='>=3.6',
-    version="3.0.0rc3",
+    version=version,
     long_description=LONG_DESCRIPTION,
     license='BSD',
     description="HIPAA X12 validator, parser and converter",

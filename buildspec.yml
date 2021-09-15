@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+  pre_build:
+    commands:
+      - pip3 install awscli --upgrade --user
+      - pip3 install twine
+      - aws codeartifact login --tool twine --domain sifthealthcare --domain-owner 090753104278 --repository sift-pyx12
+  build:
+    commands:
+      - python ${CODEBUILD_SRC_DIR}/setup.py sdist
+      - VERSION=$(cat ${CODEBUILD_SRC_DIR}/VERSION)
+      - twine upload --verbose --repository codeartifact ${CODEBUILD_SRC_DIR}/dist/sift-pyx12-${VERSION}.tar.gz
