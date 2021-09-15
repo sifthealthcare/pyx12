@@ -13,4 +13,4 @@ phases:
     commands:
       - python ${CODEBUILD_SRC_DIR}/setup.py sdist
       - VERSION=$(cat ${CODEBUILD_SRC_DIR}/VERSION)
-      - twine upload --verbose --repository codeartifact ${CODEBUILD_SRC_DIR}/dist/pyx12-${VERSION}.tar.gz
+      - twine upload --verbose --repository codeartifact ${CODEBUILD_SRC_DIR}/dist/sift-pyx12-${VERSION}.tar.gz
