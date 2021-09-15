@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- pyx12 configuration file
+<!-- sift-pyx12 configuration file
 This file can be copied to the system-wide configuration directory
-(/usr/local/etc), to a user's home directory as ~/.pyx12.conf.xml,
+(/usr/local/etc), to a user's home directory as ~/.sift-pyx12.conf.xml,
 or can be passed on the command line using the -c option
 -->
 
 <params version="1.0">
 <!--
     <param name="map_path">
-        <value>/usr/local/share/pyx12/map</value>
+        <value>/usr/local/share/sift-pyx12/map</value>
         <comment>Where to find the xml maps</comment>
     </param>
 -->

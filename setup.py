@@ -6,7 +6,7 @@ mypackage_root_dir = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(mypackage_root_dir, "VERSION")) as version_file:
     version = version_file.read().strip()
 
-# from pyx12.version import __version__
+# from sift-pyx12.version import __version__
 
 
 LONG_DESCRIPTION = """Pyx12 is a HIPAA X12 document validator and converter. It parses an ANSI X12N data file and
@@ -24,26 +24,26 @@ setup(
     keywords='x12 hipaa healthcare edi',
     author="John Holland",
     author_email="john.holland@swmbh.org",
-    url="http://github.com/azoner/pyx12",
+    url="http://github.com/azoner/sift-pyx12",
     platforms='All',
     # install_requires=[],
-    packages=['pyx12', 'pyx12.scripts'],
+    packages=['sift_pyx12', 'sift_pyx12.scripts'],
     package_data={
         '': ['*.xml', '*.md'],
-        'pyx12': ['map/*.xml', 'map/*.xsd'],
+        'sift_pyx12': ['map/*.xml', 'map/*.xsd'],
     },
-    #data_files=[('config', ['bin/pyx12.conf.xml.sample'])],
+    #data_files=[('config', ['bin/sift-pyx12.conf.xml.sample'])],
     entry_points={
         'console_scripts': [
-            'x12html = pyx12.scripts.x12html:main',
-            'x12valid = pyx12.scripts.x12valid:main',
-            'x12info = pyx12.scripts.x12info:main',
-            'x12norm = pyx12.scripts.x12norm:main',
-            'x12xml = pyx12.scripts.x12xml:main',
-            'xmlx12 = pyx12.scripts.xmlx12:main',
+            'x12html = sift_pyx12.scripts.x12html:main',
+            'x12valid = sift_pyx12.scripts.x12valid:main',
+            'x12info = sift_pyx12.scripts.x12info:main',
+            'x12norm = sift_pyx12.scripts.x12norm:main',
+            'x12xml = sift_pyx12.scripts.x12xml:main',
+            'xmlx12 = sift_pyx12.scripts.xmlx12:main',
         ]
     },
-    test_suite="pyx12.test",
+    test_suite="sift-pyx12.test",
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
