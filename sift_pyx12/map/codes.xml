@@ -726,11 +726,420 @@
     </version>
   </codeset>
   <codeset>
+    <id>adjustment_reason</id>
+    <name>Adjustment Reason Code</name>
+    <data_ele>1034</data_ele>
+    <version>
+      <!-- <eff_dte>2021-09-16 pam.caton full list replace from x12-provided file</eff_dte> -->
+      <code>1</code>
+      <code>2</code>
+      <code>3</code>
+      <code>4</code>
+      <code>5</code>
+      <code>6</code>
+      <code>7</code>
+      <code>8</code>
+      <code>9</code>
+      <code>10</code>
+      <code>11</code>
+      <code>12</code>
+      <code>13</code>
+      <code>14</code>
+      <code>15</code>
+      <code>16</code>
+      <code>17</code>
+      <code>18</code>
+      <code>19</code>
+      <code>20</code>
+      <code>21</code>
+      <code>22</code>
+      <code>23</code>
+      <code>24</code>
+      <code>25</code>
+      <code>26</code>
+      <code>27</code>
+      <code>28</code>
+      <code>29</code>
+      <code>30</code>
+      <code>31</code>
+      <code>32</code>
+      <code>33</code>
+      <code>34</code>
+      <code>35</code>
+      <code>36</code>
+      <code>37</code>
+      <code>38</code>
+      <code>39</code>
+      <code>40</code>
+      <code>41</code>
+      <code>42</code>
+      <code>43</code>
+      <code>44</code>
+      <code>45</code>
+      <code>46</code>
+      <code>47</code>
+      <code>48</code>
+      <code>49</code>
+      <code>50</code>
+      <code>51</code>
+      <code>52</code>
+      <code>53</code>
+      <code>54</code>
+      <code>55</code>
+      <code>56</code>
+      <code>57</code>
+      <code>58</code>
+      <code>59</code>
+      <code>60</code>
+      <code>61</code>
+      <code>62</code>
+      <code>63</code>
+      <code>64</code>
+      <code>65</code>
+      <code>66</code>
+      <code>67</code>
+      <code>68</code>
+      <code>69</code>
+      <code>70</code>
+      <code>71</code>
+      <code>72</code>
+      <code>73</code>
+      <code>74</code>
+      <code>75</code>
+      <code>76</code>
+      <code>77</code>
+      <code>78</code>
+      <code>79</code>
+      <code>80</code>
+      <code>81</code>
+      <code>82</code>
+      <code>83</code>
+      <code>84</code>
+      <code>85</code>
+      <code>86</code>
+      <code>87</code>
+      <code>88</code>
+      <code>89</code>
+      <code>90</code>
+      <code>91</code>
+      <code>92</code>
+      <code>93</code>
+      <code>94</code>
+      <code>95</code>
+      <code>96</code>
+      <code>97</code>
+      <code>98</code>
+      <code>99</code>
+      <code>100</code>
+      <code>101</code>
+      <code>102</code>
+      <code>103</code>
+      <code>104</code>
+      <code>105</code>
+      <code>106</code>
+      <code>107</code>
+      <code>108</code>
+      <code>109</code>
+      <code>110</code>
+      <code>111</code>
+      <code>112</code>
+      <code>113</code>
+      <code>114</code>
+      <code>115</code>
+      <code>116</code>
+      <code>117</code>
+      <code>118</code>
+      <code>119</code>
+      <code>120</code>
+      <code>121</code>
+      <code>122</code>
+      <code>123</code>
+      <code>124</code>
+      <code>125</code>
+      <code>126</code>
+      <code>127</code>
+      <code>128</code>
+      <code>129</code>
+      <code>130</code>
+      <code>131</code>
+      <code>132</code>
+      <code>133</code>
+      <code>134</code>
+      <code>135</code>
+      <code>136</code>
+      <code>137</code>
+      <code>138</code>
+      <code>139</code>
+      <code>140</code>
+      <code>141</code>
+      <code>142</code>
+      <code>143</code>
+      <code>144</code>
+      <code>145</code>
+      <code>146</code>
+      <code>147</code>
+      <code>148</code>
+      <code>149</code>
+      <code>150</code>
+      <code>151</code>
+      <code>152</code>
+      <code>153</code>
+      <code>154</code>
+      <code>155</code>
+      <code>156</code>
+      <code>157</code>
+      <code>158</code>
+      <code>159</code>
+      <code>160</code>
+      <code>161</code>
+      <code>162</code>
+      <code>163</code>
+      <code>164</code>
+      <code>165</code>
+      <code>166</code>
+      <code>167</code>
+      <code>168</code>
+      <code>169</code>
+      <code>170</code>
+      <code>171</code>
+      <code>172</code>
+      <code>173</code>
+      <code>174</code>
+      <code>175</code>
+      <code>176</code>
+      <code>177</code>
+      <code>178</code>
+      <code>179</code>
+      <code>180</code>
+      <code>181</code>
+      <code>182</code>
+      <code>183</code>
+      <code>184</code>
+      <code>185</code>
+      <code>186</code>
+      <code>187</code>
+      <code>188</code>
+      <code>189</code>
+      <code>190</code>
+      <code>191</code>
+      <code>192</code>
+      <code>193</code>
+      <code>194</code>
+      <code>195</code>
+      <code>196</code>
+      <code>197</code>
+      <code>198</code>
+      <code>199</code>
+      <code>200</code>
+      <code>201</code>
+      <code>202</code>
+      <code>203</code>
+      <code>204</code>
+      <code>205</code>
+      <code>206</code>
+      <code>207</code>
+      <code>208</code>
+      <code>209</code>
+      <code>210</code>
+      <code>211</code>
+      <code>212</code>
+      <code>213</code>
+      <code>214</code>
+      <code>215</code>
+      <code>216</code>
+      <code>217</code>
+      <code>218</code>
+      <code>219</code>
+      <code>220</code>
+      <code>221</code>
+      <code>222</code>
+      <code>223</code>
+      <code>224</code>
+      <code>225</code>
+      <code>226</code>
+      <code>227</code>
+      <code>228</code>
+      <code>229</code>
+      <code>230</code>
+      <code>231</code>
+      <code>232</code>
+      <code>233</code>
+      <code>234</code>
+      <code>235</code>
+      <code>236</code>
+      <code>237</code>
+      <code>238</code>
+      <code>239</code>
+      <code>240</code>
+      <code>241</code>
+      <code>242</code>
+      <code>243</code>
+      <code>244</code>
+      <code>245</code>
+      <code>246</code>
+      <code>247</code>
+      <code>248</code>
+      <code>249</code>
+      <code>250</code>
+      <code>251</code>
+      <code>252</code>
+      <code>253</code>
+      <code>254</code>
+      <code>255</code>
+      <code>256</code>
+      <code>257</code>
+      <code>258</code>
+      <code>259</code>
+      <code>260</code>
+      <code>261</code>
+      <code>262</code>
+      <code>263</code>
+      <code>264</code>
+      <code>265</code>
+      <code>266</code>
+      <code>267</code>
+      <code>268</code>
+      <code>269</code>
+      <code>270</code>
+      <code>271</code>
+      <code>272</code>
+      <code>273</code>
+      <code>274</code>
+      <code>275</code>
+      <code>276</code>
+      <code>277</code>
+      <code>278</code>
+      <code>279</code>
+      <code>280</code>
+      <code>281</code>
+      <code>282</code>
+      <code>283</code>
+      <code>284</code>
+      <code>285</code>
+      <code>286</code>
+      <code>287</code>
+      <code>288</code>
+      <code>289</code>
+      <code>290</code>
+      <code>291</code>
+      <code>292</code>
+      <code>293</code>
+      <code>294</code>
+      <code>295</code>
+      <code>296</code>
+      <code>297</code>
+      <code>298</code>
+      <code>299</code>
+      <code>300</code>
+      <code>301</code>
+      <code>302</code>
+      <code>303</code>
+      <code>A0</code>
+      <code>A1</code>
+      <code>A2</code>
+      <code>A3</code>
+      <code>A4</code>
+      <code>A5</code>
+      <code>A6</code>
+      <code>A7</code>
+      <code>A8</code>
+      <code>B1</code>
+      <code>B2</code>
+      <code>B3</code>
+      <code>B4</code>
+      <code>B5</code>
+      <code>B6</code>
+      <code>B7</code>
+      <code>B8</code>
+      <code>B9</code>
+      <code>B10</code>
+      <code>B11</code>
+      <code>B12</code>
+      <code>B13</code>
+      <code>B14</code>
+      <code>B15</code>
+      <code>B16</code>
+      <code>B17</code>
+      <code>B18</code>
+      <code>B19</code>
+      <code>B20</code>
+      <code>B21</code>
+      <code>B22</code>
+      <code>B23</code>
+      <code>D1</code>
+      <code>D2</code>
+      <code>D3</code>
+      <code>D4</code>
+      <code>D5</code>
+      <code>D6</code>
+      <code>D7</code>
+      <code>D8</code>
+      <code>D9</code>
+      <code>D10</code>
+      <code>D11</code>
+      <code>D12</code>
+      <code>D13</code>
+      <code>D14</code>
+      <code>D15</code>
+      <code>D16</code>
+      <code>D17</code>
+      <code>D18</code>
+      <code>D19</code>
+      <code>D20</code>
+      <code>D21</code>
+      <code>D22</code>
+      <code>D23</code>
+      <code>P1</code>
+      <code>P2</code>
+      <code>P3</code>
+      <code>P4</code>
+      <code>P5</code>
+      <code>P6</code>
+      <code>P7</code>
+      <code>P8</code>
+      <code>P9</code>
+      <code>P10</code>
+      <code>P11</code>
+      <code>P12</code>
+      <code>P13</code>
+      <code>P14</code>
+      <code>P15</code>
+      <code>P16</code>
+      <code>P17</code>
+      <code>P18</code>
+      <code>P19</code>
+      <code>P20</code>
+      <code>P21</code>
+      <code>P22</code>
+      <code>P23</code>
+      <code>P24</code>
+      <code>P25</code>
+      <code>P26</code>
+      <code>P27</code>
+      <code>P28</code>
+      <code>P29</code>
+      <code>P30</code>
+      <code>P31</code>
+      <code>W1</code>
+      <code>W2</code>
+      <code>W3</code>
+      <code>W4</code>
+      <code>W5</code>
+      <code>W6</code>
+      <code>W7</code>
+      <code>W8</code>
+      <code>W9</code>
+      <code>Y1</code>
+      <code>Y2</code>
+      <code>Y3</code>
+    </version>
+  </codeset>
+  <codeset>
     <id>remark_code</id>
     <name>Remark Code</name>
     <data_ele>127</data_ele>
     <version>
-      <!-- <eff_dte>20141101</eff_dte> -->
+      <!-- <eff_dte>2021-09-16 pam.caton full list replace from x12-provided file</eff_dte> -->
       <code>M1</code>
       <code>M2</code>
       <code>M3</code>
@@ -886,13 +1295,23 @@
       <code>MA09</code>
       <code>MA10</code>
       <code>MA11</code>
+      <code>MA12</code>
       <code>MA13</code>
       <code>MA14</code>
+      <code>MA15</code>
       <code>MA16</code>
       <code>MA17</code>
       <code>MA18</code>
       <code>MA19</code>
+      <code>MA20</code>
+      <code>MA21</code>
+      <code>MA22</code>
+      <code>MA23</code>
+      <code>MA24</code>
       <code>MA25</code>
+      <code>MA26</code>
+      <code>MA27</code>
+      <code>MA28</code>
       <code>MA29</code>
       <code>MA30</code>
       <code>MA31</code>
@@ -903,12 +1322,14 @@
       <code>MA36</code>
       <code>MA37</code>
       <code>MA38</code>
+      <code>MA39</code>
       <code>MA40</code>
       <code>MA41</code>
       <code>MA42</code>
       <code>MA43</code>
       <code>MA44</code>
       <code>MA45</code>
+      <code>MA46</code>
       <code>MA47</code>
       <code>MA48</code>
       <code>MA49</code>
@@ -953,6 +1374,7 @@
       <code>MA88</code>
       <code>MA89</code>
       <code>MA90</code>
+      <code>MA91</code>
       <code>MA92</code>
       <code>MA93</code>
       <code>MA94</code>
@@ -988,6 +1410,7 @@
       <code>MA124</code>
       <code>MA125</code>
       <code>MA126</code>
+      <code>MA127</code>
       <code>MA128</code>
       <code>MA129</code>
       <code>MA130</code>
@@ -1729,13 +2152,133 @@
       <code>N732</code>
       <code>N733</code>
       <code>N734</code>
+      <code>N735</code>
+      <code>N736</code>
+      <code>N737</code>
+      <code>N738</code>
+      <code>N739</code>
+      <code>N740</code>
+      <code>N741</code>
+      <code>N742</code>
+      <code>N743</code>
+      <code>N744</code>
+      <code>N745</code>
+      <code>N746</code>
+      <code>N747</code>
+      <code>N748</code>
+      <code>N749</code>
+      <code>N750</code>
+      <code>N751</code>
+      <code>N752</code>
+      <code>N753</code>
+      <code>N754</code>
+      <code>N755</code>
+      <code>N756</code>
+      <code>N757</code>
+      <code>N758</code>
+      <code>N759</code>
+      <code>N760</code>
+      <code>N761</code>
+      <code>N762</code>
+      <code>N763</code>
+      <code>N764</code>
+      <code>N765</code>
+      <code>N766</code>
+      <code>N767</code>
+      <code>N768</code>
+      <code>N769</code>
+      <code>N770</code>
+      <code>N771</code>
+      <code>N772</code>
+      <code>N773</code>
+      <code>N774</code>
+      <code>N775</code>
+      <code>N776</code>
+      <code>N777</code>
+      <code>N778</code>
+      <code>N779</code>
+      <code>N780</code>
+      <code>N781</code>
+      <code>N782</code>
+      <code>N783</code>
+      <code>N784</code>
+      <code>N785</code>
+      <code>N786</code>
+      <code>N787</code>
+      <code>N788</code>
+      <code>N789</code>
+      <code>N790</code>
+      <code>N791</code>
+      <code>N792</code>
+      <code>N793</code>
+      <code>N794</code>
+      <code>N795</code>
+      <code>N796</code>
+      <code>N797</code>
+      <code>N798</code>
+      <code>N799</code>
+      <code>N800</code>
+      <code>N801</code>
+      <code>N802</code>
+      <code>N803</code>
+      <code>N804</code>
+      <code>N805</code>
+      <code>N806</code>
+      <code>N807</code>
+      <code>N808</code>
+      <code>N809</code>
+      <code>N810</code>
+      <code>N811</code>
+      <code>N812</code>
+      <code>N815</code>
+      <code>N816</code>
+      <code>N817</code>
+      <code>N818</code>
+      <code>N819</code>
+      <code>N820</code>
+      <code>N821</code>
+      <code>N822</code>
+      <code>N823</code>
+      <code>N824</code>
+      <code>N825</code>
+      <code>N826</code>
+      <code>N827</code>
+      <code>N828</code>
+      <code>N829</code>
+      <code>N830</code>
+      <code>N831</code>
+      <code>N832</code>
+      <code>N833</code>
+      <code>N834</code>
+      <code>N835</code>
+      <code>N836</code>
+      <code>N837</code>
+      <code>N838</code>
+      <code>N839</code>
+      <code>N840</code>
+      <code>N841</code>
+      <code>N842</code>
+      <code>N843</code>
+      <code>N844</code>
+      <code>N845</code>
+      <code>N846</code>
+      <code>N847</code>
+      <code>N848</code>
+      <code>N849</code>
+      <code>N850</code>
+      <code>N851</code>
+      <code>N852</code>
+      <code>N853</code>
+      <code>N854</code>
+      <code>N855</code>
+      <code>N856</code>
     </version>
   </codeset>
   <codeset>
     <id>service_type</id>
     <name>Service Type Code</name>
     <version>
-      <!-- <eff_dte>20140701</eff_dte> -->
+      <!-- <eff_dte>2021-09-16 pam.caton full list replace from x12-provided file</eff_dte> -->
       <code>1</code>
       <code>2</code>
       <code>3</code>
@@ -1744,14 +2287,10 @@
       <code>6</code>
       <code>7</code>
       <code>8</code>
-      <code>9</code>
       <code>10</code>
       <code>11</code>
       <code>12</code>
-      <code>13</code>
       <code>14</code>
-      <code>15</code>
-      <code>16</code>
       <code>17</code>
       <code>18</code>
       <code>19</code>
@@ -1777,22 +2316,13 @@
       <code>41</code>
       <code>42</code>
       <code>43</code>
-      <code>44</code>
       <code>45</code>
       <code>46</code>
       <code>47</code>
-      <code>48</code>
       <code>49</code>
-      <code>50</code>
-      <code>51</code>
-      <code>52</code>
-      <code>53</code>
       <code>54</code>
       <code>55</code>
       <code>56</code>
-      <code>57</code>
-      <code>58</code>
-      <code>59</code>
       <code>60</code>
       <code>61</code>
       <code>62</code>
@@ -1810,7 +2340,7 @@
       <code>74</code>
       <code>75</code>
       <code>76</code>
-      <code>7</code>
+      <code>77</code>
       <code>78</code>
       <code>79</code>
       <code>80</code>
@@ -1833,35 +2363,28 @@
       <code>97</code>
       <code>98</code>
       <code>99</code>
-      <code>A0</code>
-      <code>A1</code>
-      <code>A2</code>
-      <code>A3</code>
       <code>A4</code>
-      <code>A5</code>
       <code>A6</code>
       <code>A7</code>
       <code>A8</code>
       <code>A9</code>
-      <code>AA</code>
       <code>AB</code>
       <code>AC</code>
       <code>AD</code>
       <code>AE</code>
       <code>AF</code>
       <code>AG</code>
-      <code>AH</code>
       <code>AI</code>
       <code>AJ</code>
       <code>AK</code>
       <code>AL</code>
       <code>AM</code>
-      <code>AN</code>
       <code>AO</code>
+      <code>AP</code>
       <code>AQ</code>
       <code>AR</code>
       <code>B1</code>
-      <code>B1</code>
+      <code>B2</code>
       <code>B3</code>
       <code>BA</code>
       <code>BB</code>
@@ -1872,15 +2395,12 @@
       <code>BG</code>
       <code>BH</code>
       <code>BI</code>
-      <code>BJ</code>
       <code>BK</code>
       <code>BL</code>
       <code>BM</code>
       <code>BN</code>
       <code>BP</code>
       <code>BQ</code>
-      <code>BR</code>
-      <code>BS</code>
       <code>BT</code>
       <code>BU</code>
       <code>BV</code>
@@ -1899,6 +2419,7 @@
       <code>DG</code>
       <code>DM</code>
       <code>DS</code>
+      <code>E0</code>
       <code>E1</code>
       <code>E2</code>
       <code>E3</code>
@@ -1935,12 +2456,25 @@
       <code>E34</code>
       <code>E35</code>
       <code>E36</code>
+      <code>E37</code>
+      <code>E38</code>
+      <code>E39</code>
+      <code>E40</code>
       <code>EA</code>
       <code>EB</code>
       <code>EC</code>
       <code>ED</code>
       <code>EE</code>
       <code>EF</code>
+      <code>EO</code>
+      <code>F1</code>
+      <code>F2</code>
+      <code>F3</code>
+      <code>F4</code>
+      <code>F5</code>
+      <code>F6</code>
+      <code>F7</code>
+      <code>F8</code>
       <code>GF</code>
       <code>GN</code>
       <code>GY</code>
@@ -1964,7 +2498,8 @@
     <name>Health Care Claim Status Category Code (Code Source 507)</name>
     <data_ele>1271</data_ele>
     <version>
-      <!-- <eff_dte>20140701</eff_dte> -->
+      <!-- <eff_dte>2021-09-16 pam.caton full list replace from x12-provided file</eff_dte> -->
+      <code>X0</code>
       <code>A0</code>
       <code>A1</code>
       <code>A2</code>
@@ -1974,12 +2509,20 @@
       <code>A6</code>
       <code>A7</code>
       <code>A8</code>
-      <code>D0</code>
-      <code>E0</code>
-      <code>E1</code>
-      <code>E2</code>
-      <code>E3</code>
-      <code>E4</code>
+      <code>DR01</code>
+      <code>DR02</code>
+      <code>DR03</code>
+      <code>DR04</code>
+      <code>DR05</code>
+      <code>DR06</code>
+      <code>DR07</code>
+      <code>DR08</code>
+      <code>P0</code>
+      <code>P1</code>
+      <code>P2</code>
+      <code>P3</code>
+      <code>P4</code>
+      <code>P5</code>
       <code>F0</code>
       <code>F1</code>
       <code>F2</code>
@@ -1988,12 +2531,6 @@
       <code>F3N</code>
       <code>F4</code>
       <code>F5</code>
-      <code>P0</code>
-      <code>P1</code>
-      <code>P2</code>
-      <code>P3</code>
-      <code>P4</code>
-      <code>P5</code>
       <code>R0</code>
       <code>R1</code>
       <code>R3</code>
@@ -2012,7 +2549,12 @@
       <code>R16</code>
       <code>R17</code>
       <code>RQ</code>
-      <code>X0</code>
+      <code>E0</code>
+      <code>E1</code>
+      <code>E2</code>
+      <code>E3</code>
+      <code>E4</code>
+      <code>D0</code>
     </version>
   </codeset>
   <codeset>
@@ -2020,7 +2562,7 @@
     <name>Health Care Claim Status Code (Code Source 508)</name>
     <data_ele>1271</data_ele>
     <version>
-      <!-- <eff_dte>20141101</eff_dte> -->
+      <!-- <eff_dte>2021-09-16 pam.caton full list replace from x12-provided file</eff_dte> -->
       <code>0</code>
       <code>1</code>
       <code>2</code>
@@ -2780,6 +3322,30 @@
       <code>769</code>
       <code>770</code>
       <code>771</code>
+      <code>772</code>
+      <code>773</code>
+      <code>774</code>
+      <code>775</code>
+      <code>776</code>
+      <code>777</code>
+      <code>778</code>
+      <code>779</code>
+      <code>780</code>
+      <code>781</code>
+      <code>782</code>
+      <code>783</code>
+      <code>784</code>
+      <code>785</code>
+      <code>786</code>
+      <code>787</code>
+      <code>788</code>
+      <code>789</code>
+      <code>790</code>
+      <code>791</code>
+      <code>792</code>
+      <code>793</code>
+      <code>794</code>
+      <code>795</code>
     </version>
   </codeset>
   <codeset>
@@ -2787,6 +3353,7 @@
     <name>Place of Service - code source 237</name>
     <data_ele>1331</data_ele>
     <version>
+      <!-- <eff_dte>20210915 pam.caton added missing code based on https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set </eff_dte> -->
       <code>01</code>
       <code>02</code>
       <code>03</code>
@@ -2827,6 +3394,7 @@
       <code>55</code>
       <code>56</code>
       <code>57</code>
+      <code>58</code>
       <code>60</code>
       <code>61</code>
       <code>62</code>
