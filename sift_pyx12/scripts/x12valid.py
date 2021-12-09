@@ -95,7 +95,7 @@ def main():
         logger.setLevel(logging.ERROR)
     fd_997 = None
     fd_html = None
-    flag_997 = True
+    flag_997 = False
     param.set('exclude_external_codes', ','.join(args.exclude_external))
     if args.map_path:
         param.set('map_path', args.map_path)

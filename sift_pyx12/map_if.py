@@ -987,10 +987,16 @@ class segment_if(x12_node):
                 if seg_data.ele_len(ref_des) > subele_count and child_node.usage != 'N':
                     subele_node = child_node.get_child_node_by_idx(
                         subele_count + 1)
-                    err_str = 'Too many sub-elements in composite "%s" (%s)' % \
-                        (subele_node.name, subele_node.refdes)
+                    if subele_node:
+                        err_str = 'Too many sub-elements in composite "%s" (%s)' % \
+                            (subele_node.name, subele_node.refdes)
+                        err_value = seg_data.get_value(ref_des)
+                        errh.ele_error('3', err_str, err_value, ref_des)
+                    else:
+                        err_str = f'Too many sub-elements in composite in seg {seg_data.get_seg_id()} ERROR REPORTING NEEDS WORK!'
                     err_value = seg_data.get_value(ref_des)
                     errh.ele_error('3', err_str, err_value, ref_des)
+
                 valid &= child_node.is_valid(comp_data, errh)
             elif child_node.is_element():
                 # Validate Element
@@ -1478,10 +1484,11 @@ class composite_if(x12_node):
 
         if self.usage == 'R':
             good_flag = False
-            for sub_ele in comp_data:
-                if sub_ele is not None and len(sub_ele.get_value()) > 0:
-                    good_flag = True
-                    break
+            if comp_data:
+                for sub_ele in comp_data:
+                    if sub_ele is not None and len(sub_ele.get_value()) > 0:
+                        good_flag = True
+                        break
             if not good_flag:
                 err_str = 'At least one component of composite "%s" (%s) is required' % \
                     (self.name, self.refdes)

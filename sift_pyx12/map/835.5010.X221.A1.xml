@@ -3892,7 +3892,7 @@
           <name>Footer</name>
           <usage>S</usage>
           <pos>0130</pos>
-          <repeat>1</repeat>
+          <repeat>&gt;1</repeat>
           <segment xid="PLB">
             <name>Provider Adjustment</name>
             <usage>S</usage>
