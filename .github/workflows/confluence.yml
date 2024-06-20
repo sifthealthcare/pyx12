@@ -1,0 +1,16 @@
+name: Deploy README to Confluence
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    uses: sifthealthcare/sift-github-workflows/.github/workflows/confluence.yml@master
+    secrets: inherit
+    with:
+      repo_name: sift-pyx12
+      space_key: KB
+      parent_id: 120815633
+      page_title: sift-pyx12
