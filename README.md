@@ -3,7 +3,7 @@ For the sift-specific version:
 
 # Install
 
-    We have this in code-artifact.  For now:
+    We have this in code-artifact. For now:
     ~/dustin/bin/codeartifact.sh pip3 sift-pyx12
     pip3 install sift-pyx12
 
